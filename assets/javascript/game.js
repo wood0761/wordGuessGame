@@ -63,6 +63,7 @@ document.addEventListener("keydown", function(event) {
                 x--;                                            // every time a letter is correct, x (which equals the total number of letters of the word) losses 1
                     if (x === 0){                               // so if x = 0, the entire word has been guessed
                         winsCounter++;
+                        arrayOfLetters = [];                    // this clears the array of letters so the game stops working once you have won
                         $(".winsTally").empty();
                         $(".winsTally").append("Wins: " + winsCounter);    // update winstally div with win
                         $(".win").show();                       // show you win! div w/ reset button
@@ -77,7 +78,7 @@ document.addEventListener("keydown", function(event) {
             $(".wrongLetters").append(char + " ");                    // append wrong char to guessed letters div
             if (strikes.length === 0){
                 lossesCounter++;
-                arrayOfLetters = [];
+                arrayOfLetters = [];                            // this clears the array of letts so the game stops working once you have lost
                 $(".wrongGuess").append(": (");                 // no more strikes, sad face
                 $(".lossesTally").empty();                 
                 $(".lossesTally").append("Losses: " + lossesCounter);        // update loses tally with lost game
