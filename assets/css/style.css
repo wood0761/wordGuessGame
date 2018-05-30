@@ -1,32 +1,70 @@
-
-
+body{
+    color: #777;
+    background-color: pink;
+    font-family: 'Yesteryear', cursive;
+}
 .jumbotron{
+    background-color: pink;
     text-align: center;
-    padding: 10px;
-    background: url('/assets/images/1920x1080-the-curse-of-the-27-club-why-do-364x245.jpg') no-repeat center center;
+    padding-top: 30px;
+    padding-bottom: 0;
 }
 .anyKey{
-    background-color: black;
     color: white;
     text-align: center;
     font-size: 50px;
 }
 .container{
     text-align: center;
-    border: 3px solid black;
     margin: 1px auto;
 }
 .underScore{
-    font-size: 40px;
+    font-size: 60px;
     padding: 20px;
 }
+.strikes{
+    width: 300px;
+}
 .wrongLetters{
-    padding: 10px;
-    height: 40px;
+    height: 80px;
+    font-size: 60px;
 }
 .wrongGuess{
     height: 40px;
 }
 button{
-    margin: 10px;
+    margin-top: 10px;
+    font-size: 30px;
+    height: 50px;
+    width: 175px;
+    background-color:white;
+    border: 2px dotted #777;
+}
+/*most smart phones*/
+@media screen and (max-width: 640px) {
+    .underScore {
+      font-size: 40px;
+    }
+    .wrongLetters{
+        height: 40px;
+        font-size: 30px;
+    }
+    .anyKey{
+        font-size: 40px;
+    }
+}
+/* for iphone 5*/
+@media screen and (max-width: 321px) {         
+    h2{
+        font-size: 25px;
+    }
+    .anyKey{
+        font-size: 30px;
+    }
+    .jumbotron{
+        padding-top: 15px;
+    }
+    button{
+        margin-top:0;
+    }
 }

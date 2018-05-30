@@ -15,7 +15,7 @@ var x = choosenWord.length - 1;                     // - 1 to account for whites
 var arrayOfLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var underScore = [];                                // array where underscores are stored
 var char = "";                                       // user input
-var strikes = [" X ", " X ", " X ", " X ", " X "];   // total guesses 
+var strikes = [" X "," X "," X "," X "," X "," X "];                // total guesses 
 var winsCounter = 0;                                 // total wins
 var lossesCounter = 0;                               // total losses
 
@@ -26,7 +26,7 @@ $(".wrongGuess").append(strikes);
 keyEvents();
 
 $(".resetButton").click(function(){
-                                                        // array of the good die young
+    // on clicking the "play again" button, most of the screen resets, with the exception of the wins/losses tally (s.t. the score is kept)                                                  
     twentySevenClub = ["brian jones", "jimi hendrix", "janis joplin", "jim morrison", "kurt cobain", "amy winehouse"];
     randomNumber = Math.floor(Math.random() * twentySevenClub.length);
     wordString = twentySevenClub[randomNumber];     // the string is used for charAt() to find whitespacer for printing underscores or whitespace
@@ -48,8 +48,6 @@ $(".resetButton").click(function(){
     keyEvents();
 });
     
-
-
 function keyEvents () {
 document.addEventListener("keydown", function(event) {
     char = (String.fromCharCode(event.which).toLowerCase());    // creates character from key event using key code
@@ -76,7 +74,7 @@ document.addEventListener("keydown", function(event) {
             strikes.splice(0,1);                                // remove 1 guess from strikes
             $(".wrongGuess").empty();                           // clear strikes
             $(".wrongGuess").append(strikes);                   // append new strikes array (after sliced)
-            $(".wrongLetters").append(char);                    // append wrong char to guessed letters div
+            $(".wrongLetters").append(char + " ");                    // append wrong char to guessed letters div
             if (strikes.length === 0){
                 lossesCounter++;
                 $(".wrongGuess").append(": (");                 // no more strikes, sad face
