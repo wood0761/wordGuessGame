@@ -77,6 +77,7 @@ document.addEventListener("keydown", function(event) {
             $(".wrongLetters").append(char + " ");                    // append wrong char to guessed letters div
             if (strikes.length === 0){
                 lossesCounter++;
+                arrayOfLetters = [];
                 $(".wrongGuess").append(": (");                 // no more strikes, sad face
                 $(".lossesTally").empty();                 
                 $(".lossesTally").append("Losses: " + lossesCounter);        // update loses tally with lost game
