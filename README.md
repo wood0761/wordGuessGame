@@ -7,3 +7,4 @@ Word Guess Game is the classic hangman. It starts at the stroke of a key, and en
 
 * Bootstrap for design.
 * Javascript and Jquery to handle events.
+* Media Queries for full responsiveness. 
