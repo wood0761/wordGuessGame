@@ -35,7 +35,7 @@ $(".resetButton").click(function(){
     arrayOfLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
     underScore = [];                                // array where underscores are stored
     char = "";                                       // user input
-    strikes = [" X ", " X ", " X ", " X ", " X "];   // total guesses
+    strikes = [" X ", " X ", " X ", " X ", " X ", " X "];   // total guesses
     $(".underScore").empty(); 
     $(".wrongGuess").empty();
     $(".wrongLetters").empty();
@@ -78,7 +78,7 @@ document.addEventListener("keydown", function(event) {
             $(".wrongLetters").append(char + " ");                    // append wrong char to guessed letters div
             if (strikes.length === 0){
                 lossesCounter++;
-                arrayOfLetters = [];                            // this clears the array of letts so the game stops working once you have lost
+                arrayOfLetters = [];                            // this clears the array of letters so the game stops working once you have lost
                 $(".wrongGuess").append(": (");                 // no more strikes, sad face
                 $(".lossesTally").empty();                 
                 $(".lossesTally").append("Losses: " + lossesCounter);        // update loses tally with lost game
@@ -86,7 +86,6 @@ document.addEventListener("keydown", function(event) {
             }
         }
     }
-    
 });
 }
 
