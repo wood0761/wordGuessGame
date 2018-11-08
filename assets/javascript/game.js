@@ -7,17 +7,17 @@ $(document).keyup(function(){
 });
 
                                                     // array of the good die young
-var twentySevenClub = ["brian jones", "jimi hendrix", "janis joplin", "jim morrison", "kurt cobain", "amy winehouse"];
-var randomNumber = Math.floor(Math.random() * twentySevenClub.length);
-var wordString = twentySevenClub[randomNumber];     // the string is used for charAt() to find whitespacer for printing underscores or whitespace
-var choosenWord = wordString.split("");             // the array of the string is used for everything else
-var x = choosenWord.length - 1;                     // - 1 to account for whitespace. x is used to determine if the full word has been guessed!
-var arrayOfLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-var underScore = [];                                // array where underscores are stored
-var char = "";                                       // user input
-var strikes = [" X "," X "," X "," X "," X "," X "];                // total guesses 
-var winsCounter = 0;                                 // total wins
-var lossesCounter = 0;                               // total losses
+const twentySevenClub = ["brian jones", "jimi hendrix", "janis joplin", "jim morrison", "kurt cobain", "amy winehouse"];
+const randomNumber = Math.floor(Math.random() * twentySevenClub.length);
+const wordString = twentySevenClub[randomNumber];     // the string is used for charAt() to find whitespacer for printing underscores or whitespace
+const choosenWord = wordString.split("");             // the array of the string is used for everything else
+const x = choosenWord.length - 1;                     // - 1 to account for whitespace. x is used to determine if the full word has been guessed!
+const arrayOfLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+const underScore = [];                                // array where underscores are stored
+const char = "";                                       // user input
+const strikes = [" X "," X "," X "," X "," X "," X "];                // total guesses 
+const winsCounter = 0;                                 // total wins
+const lossesCounter = 0;                               // total losses
 
 
 generateUnderScore(choosenWord);
